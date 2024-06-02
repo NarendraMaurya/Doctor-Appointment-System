@@ -39,7 +39,7 @@ const changeAcountStatusController = async (req,res) => {
         })
         user.isDoctor=(status === 'approved' ? true : false);
         await user.save();
-        res.status(200).send({ succes: true, message: "Account Status updated successfully",data:doctor });
+        res.status(200).send({ success: true, message: "Account Status updated successfully",data:doctor });
     } catch (error) {
         console.log(error);
         res.status(500).send({ success: false, message: 'Error in Updating the status', error }); 
